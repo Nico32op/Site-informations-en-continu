@@ -129,7 +129,7 @@ export default {
       )
 
       .then((response) => {
-        // console.log("réponse API", response);
+        // console.log("réponse API", response)l;
         this.posts = response.data.articles;
       })
       .catch((error) => console.log(error));
