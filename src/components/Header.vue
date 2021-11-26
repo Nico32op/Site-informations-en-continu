@@ -59,6 +59,7 @@ export default {
   .header .news {
     text-align: center;
     font-size: 14px;
+    margin-bottom: 10px;
   }
 }
 

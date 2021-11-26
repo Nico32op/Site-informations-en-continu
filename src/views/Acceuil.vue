@@ -211,6 +211,7 @@ h2 {
     background-color: white;
     list-style: none;
     position: relative;
+    overflow: hidden;
   }
   p {
     margin: 0px;
