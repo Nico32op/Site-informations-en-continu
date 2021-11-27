@@ -289,5 +289,9 @@ label,
     /*FIN MENU BURGER*/
     display: flex;
   }
+
+  h2 {
+    margin-top: 10px;
+  }
 }
 </style>

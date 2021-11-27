@@ -323,6 +323,10 @@ label,
     display: flex;
   }
 
+  h2 {
+    margin-top: 10px;
+  }
+
   .titrecoin {
     font-size: 14px;
   }
