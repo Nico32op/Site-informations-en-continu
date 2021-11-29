@@ -3,6 +3,10 @@
     <Header />
     <div class="nav">
       <p class="btn">
+        <a href="#ancrebitcoin"> <i class="fab fa-bitcoin"></i></a>
+      </p>
+
+      <p class="btn">
         <router-link class="btn" to="/sports">Sports</router-link>
       </p>
       <p class="btn">
@@ -28,6 +32,10 @@
       <label for="toggle">☰</label>
       <input type="checkbox" id="toggle" />
       <div class="main_pages">
+        <p class="btn">
+          <a href="#ancrebitcoin"> <i class="fab fa-bitcoin"></i></a>
+        </p>
+
         <p class="btn">
           <router-link class="btn" to="/sante"> Santé</router-link>
         </p>
@@ -77,7 +85,7 @@
         </span>
       </li>
     </div>
-
+    <div id="ancrebitcoin"></div>
     <h2 class="titrecoin">Prix du Bitcoin mis à jour toutes les minutes :</h2>
     <li class="listecoin" v-for="item in member" :key="item.id">
       <span
@@ -172,6 +180,14 @@ body {
     color: white;
     background-color: $colorsource-btnhover;
   }
+}
+
+.fab.fa-bitcoin {
+  font-size: 20px;
+}
+
+.fab.fa-bitcoin:hover {
+  color: white;
 }
 
 h2 {
@@ -286,7 +302,7 @@ label,
       // box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
       padding-top: 0px;
       text-align: center;
-      height: 300px;
+      height: 360px;
       margin-bottom: 10px;
       margin-top: 10px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -302,6 +318,10 @@ label,
     .main_pages a:hover {
       text-decoration: underline;
     }
+  }
+
+  .fab.fa-bitcoin {
+    font-size: 30px;
   }
 
   label {
