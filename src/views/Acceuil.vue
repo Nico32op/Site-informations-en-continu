@@ -302,7 +302,7 @@ label,
       // box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
       padding-top: 0px;
       text-align: center;
-      height: 360px;
+      height: 365px;
       margin-bottom: 10px;
       margin-top: 10px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
