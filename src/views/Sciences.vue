@@ -104,9 +104,7 @@ export default {
   mounted() {
     // je récupère les données du profil connecté
     axios
-      .get(
-        "https://gnews.io/api/v4/top-headlines?token=8c90fa01a622015061484a9fcd8f1dc2&lang=fr&topic=science"
-      )
+      .get(process.env.VUE_APP_SCIENCES)
 
       .then((response) => {
         // console.log("réponse API", response);

@@ -30,7 +30,12 @@
       <input type="checkbox" id="toggle" />
       <div class="main_pages">
         <p class="btn">
-          <router-link class="btn" to="/acceuil">Home</router-link>
+          <router-link
+            @click.prevent="window.location.reload()"
+            class="btn"
+            to="/acceuil"
+            >Home</router-link
+          >
         </p>
         <p class="btn">
           <router-link class="btn" to="/sports">Sports</router-link>
@@ -106,9 +111,7 @@ export default {
   mounted() {
     // je récupère les données du profil connecté
     axios
-      .get(
-        "https://gnews.io/api/v4/top-headlines?token=8c90fa01a622015061484a9fcd8f1dc2&lang=fr&topic=health"
-      )
+      .get(process.env.VUE_APP_SANTE)
 
       .then((response) => {
         // console.log("réponse API", response);

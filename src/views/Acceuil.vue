@@ -3,10 +3,6 @@
     <Header />
     <div class="nav">
       <p class="btn">
-        <a href="#ancrebitcoin"> <i class="fab fa-bitcoin"></i></a>
-      </p>
-
-      <p class="btn">
         <router-link class="btn" to="/sports">Sports</router-link>
       </p>
       <p class="btn">
@@ -32,10 +28,6 @@
       <label for="toggle">☰</label>
       <input type="checkbox" id="toggle" />
       <div class="main_pages">
-        <p class="btn">
-          <a href="#ancrebitcoin"> <i class="fab fa-bitcoin"></i></a>
-        </p>
-
         <p class="btn">
           <router-link class="btn" to="/sante"> Santé</router-link>
         </p>
@@ -85,7 +77,7 @@
         </span>
       </li>
     </div>
-    <div id="ancrebitcoin"></div>
+
     <h2 class="titrecoin">Prix du Bitcoin mis à jour toutes les minutes :</h2>
     <li class="listecoin" v-for="item in member" :key="item.id">
       <span
@@ -123,7 +115,7 @@ export default {
   mounted() {
     // je récupère les données du profil connecté
     axios
-      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+      .get(process.env.VUE_APP_BASE_URI)
 
       .then((response) => {
         // console.log("réponse API", response);
@@ -132,9 +124,7 @@ export default {
       .catch((error) => console.log(error));
 
     axios
-      .get(
-        "https://gnews.io/api/v4/top-headlines?token=8c90fa01a622015061484a9fcd8f1dc2&lang=fr"
-      )
+      .get(process.env.VUE_APP_ACCEUIL)
 
       .then((response) => {
         // console.log("réponse API", response)l;
@@ -302,7 +292,7 @@ label,
       // box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 16%);
       padding-top: 0px;
       text-align: center;
-      height: 365px;
+      height: 300px;
       margin-bottom: 10px;
       margin-top: 10px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
